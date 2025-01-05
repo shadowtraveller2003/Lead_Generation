@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pincode Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Pincode Search Results</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ROC</th>
+                <th>CIN Number</th>
+                <th>Company Address</th>
+                <th>Company Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for company in companies %}
+            <tr>
+                <td>{{ company.ROC }}</td>
+                <td>{{ company.CIN_Number }}</td>
+                <td>{{ company.Company_Address }}</td>
+                <td>{{ company.Company_Name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Main Page</a>
+</body>
+</html>

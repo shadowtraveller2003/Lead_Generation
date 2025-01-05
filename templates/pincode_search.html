@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pincode Based Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Pincode Based Search</h1>
+    <form action="/pincode_search_results" method="post">
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" required>
+        <br>
+        <input type="submit" value="Search">
+    </form>
+    <a href="/index">Location Based Search</a>
+</body>
+</html>
